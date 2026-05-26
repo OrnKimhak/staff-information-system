@@ -3,38 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Array-Method/style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Staff Information</title>
   </head>
   <body>
     <div class="container">
+      <div class="logo">
+        <img src="/image/logo.png" alt="">
+      </div>
       <div class="contain">
-        <input
-          type="text"
-          name=""
-          id="txt-name"
-          placeholder="Enter Staff Name"
-        />
-        <input
-          type="number"
-          name=""
-          id="txt-phone"
-          placeholder="Enter Staff Phone"
-        />
-        <input
-          type="number"
-          name=""
-          id="txt-age"
-          placeholder="Enter Staff Age"
-        />
-        <input
-          type="text"
-          name=""
-          id="txt-gender"
-          placeholder="Enter Staff Gender"
-        />
-        <button type="button" id="btn-add">Add Staff</button>
+        <!-- Input fields for staff information -->
+        <div class="contain-input">
+          <input type="text" name="" id="txt-idnumber" placeholder="បញ្ចូលអត្តលេខ">
+          <input type="text" name="" id="txt-name" placeholder="បញ្ចូលឈ្មោះ" />
+          <input type="choice" name="" id="txt-gender" placeholder="បញ្ចូលភេទ​ (ស/ប)" />
+          <!-- <select name="gender" id="txt-gender">
+            <option value="">ជ្រើសរើសភេទ</option>
+            <option value="male">ប</option>
+            <option value="female">ស</option>
+          </select> -->
+          <input type="email" name="" id="txt-email" placeholder="បញ្ចូលអុីម៉ែល">
+          <input type="text" name="" id="txt-position" placeholder="បញ្ចូលមុខដំណែង">
+          <input type="time" name="" id="txt-timein" placeholder="បញ្ចូលម៉ោងចូល">
+          <input type="time" name="" id="txt-timeout" placeholder="បញ្ចូលម៉ោងចេញ">
+          <input type="date" name="" id="txt-workdate" placeholder="បញ្ចូលថ្ងៃចូលធ្វើការ">
+          <input type="text" name="" id="txt-team" placeholder="បញ្ចូល Team">
+          <input type="number" name="" id="txt-phone" placeholder="បញ្ចូលលេខទូរសព្ទ" />
+          <!-- <input type="number" name="" id="txt-age" placeholder="បញ្ចូលអាយុ" /> -->
+        </div>
+        <!-- Add staff information and button -->
+         <div class="contain-btn">
+          <button type="button" id="btn-add">បញ្ចូលបុគ្គលិក</button>
+          <button type="button" id="btn-search" onclick = "searchStaff()">ស្វែងរក</button>
+          <button type="button" id="btn-display" onclick = "displayStaff()">បង្ហាញបុគ្គលិក</button>
+         </div>
+        
       </div>
       <div class="staff-information">
         <h1>Staff Information</h1>
@@ -45,12 +52,18 @@
           <thead>
             <tr>
               <th width="5%">ID</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th>អត្តលេខ</th>
+              <th>ឈ្មោះ</th>
+              <th>ភេទ</th>
+              <th>អុីម៉ែល</th>
+              <th>មុខដំណែង</th>
+              <th>ម៉ោងចូល</th>
+              <th>ម៉ោងចេញ</th>
+              <th>ថ្ងៃចូលធ្វើការ</th>
+              <th>Team</th>
+              <th>លេខទូរសព្ទ</th>
+              <th>កែទិន្នន័យ</th>
+              <th>លុបទិន្នន័យ</th>
             </tr>
           </thead>
 
@@ -61,5 +74,5 @@
       </div>
     </div>
   </body>
-  <script src="/Array-Method/script.js"></script>
+  <script src="script.js"></script>
 </html>
